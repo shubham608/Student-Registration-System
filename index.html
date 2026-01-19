@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Registration-System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>Register, update, and manage student details efficiently</p>
+    </header>
+
+    <main class="container">
+        <!-- Registration Form -->
+        <form id="studentForm">
+            <h2>Register Student</h2>
+
+            <input type="text" id="name" placeholder="Student Name">
+            <small class="error-msg" id="nameError"></small>
+
+            <input type="text" id="studentId" placeholder="Student ID">
+            <small class="error-msg" id="idError"></small>
+
+            <input type="email" id="email" placeholder="Email ID">
+            <small class="error-msg" id="emailError"></small>
+
+            <input type="text" id="contact" placeholder="Contact Number">
+            <small class="error-msg" id="contactError"></small>
+
+            <button type="submit">Add Student</button>
+        </form>
+
+
+        <!-- Display Section -->
+        <section class="table-container">
+            <h2>Registered Students</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable"></tbody>
+            </table>
+        </section>
+    </main>
+    
+</body>
+</html>
