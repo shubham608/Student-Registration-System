@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+}
+
+/* Header with subtle gradient */
+header {
+    background: linear-gradient(135deg, #1e88e5, #42a5f5);
+    color: white;
+    text-align: center;
+    padding: 24px 20px;
+}
+
+header h1 {
+    margin-bottom: 6px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card-style Form */
+form {
+    flex: 1;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Inputs & Button */
+form input,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.15);
+}
+
+button {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Card-style Table Section */
+.table-container {
+    flex: 2;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    max-height: 400px;
+    overflow-y: auto; /* Dynamic scrollbar */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Action buttons */
+td:last-child {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.icon-btn {
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.icon-btn i {
+    pointer-events: none;
+}
+
+.edit {
+    background: orange;
+    color: white;
+}
+
+.delete {
+    background: red;
+    color: white;
+}
+
+.icon-btn:hover {
+    opacity: 0.85;
+}
+
+/* Validation styles */
+.input-error {
+    border: 1px solid red;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.success {
+    color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
