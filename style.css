@@ -8,7 +8,6 @@ body {
     background: #f4f6f8;
 }
 
-/* Header with subtle gradient */
 header {
     background: linear-gradient(135deg, #1e88e5, #42a5f5);
     color: white;
@@ -20,7 +19,6 @@ header h1 {
     margin-bottom: 6px;
 }
 
-/* Layout */
 .container {
     display: flex;
     gap: 20px;
@@ -103,7 +101,6 @@ tbody tr:hover {
     background: #f9fafb;
 }
 
-/* Action buttons */
 td:last-child {
     display: flex;
     gap: 6px;

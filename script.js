@@ -86,10 +86,8 @@ form.addEventListener("submit", function (e) {
     if (!isValid) return;
 
     if (editIndex === null) {
-        // Add new student
         students.push({ name, id, email, contact });
     } else {
-        // Update existing student
         students[editIndex] = { name, id, email, contact };
         editIndex = null;
         document.querySelector("button[type='submit']").textContent = "Add Student";
@@ -123,7 +121,7 @@ function editStudent(index) {
     document.querySelector("button[type='submit']").textContent = "Update Student";
 }
 
-// Field-level error helpers
+// Error
 function showError(errorId, message, inputId) {
     document.getElementById(errorId).textContent = message;
     document.getElementById(inputId).classList.add("input-error");
